@@ -7,7 +7,7 @@ polling_verb: get
 framework_version: latest
 # My work: open tickets assigned to the key's owner, every board and project, newest change first
 polling_url: https://api.tracklin.es/api/search?assignee=me&status=open&limit=12
-polling_headers: 'authorization=bearer {{ api_key }}'
+polling_headers: 'Authorization=Bearer {{ api_key }}'
 name: TrackLin.es
 description: Your open TrackLin.es tickets
 refresh_interval: 15
