@@ -5,7 +5,7 @@ Shows your open TrackLin.es tickets (the same list as **My work**) on a TRMNL. I
 
 ## Install
 
-Make a **read-only personal key** in TrackLin.es (Your settings → API keys), add the plugin in TRMNL and paste the key. A personal key is you, so the plugin shows your tickets; read-only means TRMNL can never change anything.
+Install it from [the TrackLin.es recipe](https://trmnl.com/recipes/tracklin-es-511430). Make a **read-only personal key** in TrackLin.es (Your settings → API keys), add the plugin in TRMNL and paste the key. A personal key is you, so the plugin shows your tickets; read-only means TRMNL can never change anything.
 
 ## Develop
 
