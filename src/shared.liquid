@@ -1,0 +1,29 @@
+{% template ticket %}
+<div class="item">
+  <div class="meta"></div>
+  <div class="content">
+    <span class="title title--small">{% if t.key %}{{ t.key }} {% endif %}{{ t.title | truncate: title_len }}</span>
+    {% if detail %}<span class="description">{{ t.project_name }}{% if t.board_name %} · {{ t.board_name }}{% endif %}</span>{% endif %}
+    <div class="flex gap--small">
+      <span class="label label--small label--underline">{{ t.column_name | default: "Backlog" }}</span>
+      {% if t.priority == "urgent" or t.priority == "high" %}<span class="label label--small label--inverted">{{ t.priority }}</span>{% endif %}
+      {% if t.blocked %}<span class="label label--small label--outline">blocked</span>{% endif %}
+    </div>
+  </div>
+</div>
+{% endtemplate %}
+
+{% template tickets %}
+<div class="layout layout--col layout--top gap--small">
+  {% if data.size == 0 %}
+    <span class="title">Nothing assigned to you</span>
+  {% else %}
+    {% for t in data limit: max %}{% render "ticket", t: t, title_len: title_len, detail: detail %}{% endfor %}
+  {% endif %}
+</div>
+<div class="title_bar">
+  <img class="image" src="https://tracklin.es/logo-tile.png" />
+  <span class="title">My work</span>
+  <span class="instance">{% if data.size > max %}{{ max }} of {{ data.size }}{% if data.size == 12 %}+{% endif %}{% else %}{{ data.size }} open{% endif %}</span>
+</div>
+{% endtemplate %}

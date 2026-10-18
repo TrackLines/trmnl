@@ -1,0 +1,24 @@
+---
+strategy: polling
+no_screen_padding: 'no'
+dark_mode: 'no'
+static_data: ''
+polling_verb: get
+framework_version: latest
+# My work: open tickets assigned to the key's owner, every board and project, newest change first
+polling_url: https://api.tracklin.es/api/search?assignee=me&status=open&limit=12
+polling_headers: 'authorization=bearer {{ api_key }}'
+name: TrackLin.es
+description: Your open TrackLin.es tickets
+refresh_interval: 15
+custom_fields:
+- keyname: api_key
+  field_type: password
+  name: API key
+  description: A read-only personal key (tl_p_…) from <a href="https://tracklin.es/account/api-keys">TrackLin.es</a> → Your settings → API keys. The plugin shows the tickets assigned to you.
+  placeholder: tl_p_…
+- keyname: author_bio
+  field_type: author_bio
+  name: About
+  description: Your open tickets from <a href="https://tracklin.es">TrackLin.es</a>, the same list as My work.
+  learn_more_url: https://tracklin.es/contact

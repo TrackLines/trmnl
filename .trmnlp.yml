@@ -1,0 +1,7 @@
+# local preview only (trmnlp serve); not uploaded
+watch:
+  - src
+  - .trmnlp.yml
+custom_fields:
+  api_key: "{{ env.TRACKLINES_API_KEY }}"
+time_zone: Europe/London
