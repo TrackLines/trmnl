@@ -5,12 +5,14 @@ dark_mode: 'no'
 static_data: ''
 polling_verb: get
 framework_version: latest
-# My work: open tickets assigned to the key's owner, every board and project, newest change first
+serverless_language: ''
+refresh_interval_floor: ''
 polling_url: https://api.tracklin.es/api/search?assignee=me&status=open&limit=12
-polling_headers: 'Authorization=Bearer {{ api_key }}'
-name: TrackLin.es
-description: Your open TrackLin.es tickets
-refresh_interval: 15
+polling_headers: Authorization=Bearer {{ api_key }}
+polling_body: ''
+id: 511430
+oauth_enabled: 'false'
+oauth_pkce_enabled: 'no'
 custom_fields:
 - keyname: api_key
   field_type: password
@@ -22,3 +24,6 @@ custom_fields:
   name: About
   description: Your open tickets from <a href="https://tracklin.es">TrackLin.es</a>, the same list as My work.
   learn_more_url: https://tracklin.es/contact
+name: TrackLin.es
+description: Your open TrackLin.es tickets
+refresh_interval: 15
