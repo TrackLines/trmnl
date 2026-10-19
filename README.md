@@ -14,3 +14,7 @@ gem install trmnl_preview
 TRACKLINES_API_KEY=tl_p_… trmnlp serve   # http://localhost:4567
 trmnlp login && trmnlp push              # upload to your TRMNL account
 ```
+
+## License
+
+MIT, see [LICENSE](LICENSE).
